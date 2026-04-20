@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IDM - Parcial 1 - Orlandoni</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav-container">
+        <input type="checkbox" id="menu-toggle" />
+
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <ul class="nav-menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#caracteristicas">Características</a></li>
+          <li><a href="#modos">Modos</a></li>
+          <li><a href="#joycon">Joy-Con™</a></li>
+          <li><a href="#galeria">Juegos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio">
+        <h1>Nintendo Switch – Edición OLED</h1>
+        <div class="hero-container">
+          <img src="img/nintendo-switch-oled-hero.png" alt="Consola Nintendo Switch Modelo OLED" />
+          <div class="texto-intro">
+            <p>
+              Descubre la consola que te permite disfrutar de tus juegos favoritos
+              <strong>donde quieras y como quieras</strong>.
+            </p>
+            <p>
+              Juega en casa o en el camino con una <strong>vibrante pantalla OLED de 7 pulgadas</strong> con colores
+              brillantes y contrastes definidos.
+            </p>
+            <p>
+              Incluye <strong>64 GB de almacenamiento interno</strong>, base con puerto LAN, soporte ajustable y audio
+              mejorado.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="caracteristicas">
+        <h2>Características principales</h2>
+        <div class="grid-features">
+          <article>
+            <img src="img/pantalla-oled-detalle.jpg" alt="Pantalla OLED detalle" />
+            <h3>Pantalla OLED de 7"</h3>
+            <p>Deleita tus ojos con <strong>colores vibrantes</strong> cuando juegues en el camino.</p>
+          </article>
+          <article>
+            <img src="img/soporte-ajustable.png" alt="Soporte ajustable" />
+            <h3>Soporte ajustable</h3>
+            <p>Utiliza el <strong>resistente soporte</strong> para disfrutar del modo semiportátil.</p>
+          </article>
+          <article>
+            <img src="img/consola-audio-puerto.jpg" alt="Puerto LAN" />
+            <h3>Puerto LAN y 64GB</h3>
+            <p>Conexión por cable mediante el <strong>puerto LAN</strong> y mayor almacenamiento interno.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="modos">
+        <h2>Tres modos de jugar</h2>
+        <div class="modos-flex">
+          <div class="modo-card">
+            <img src="img/modo-tv.png" alt="Modo TV" />
+            <h3>Modo TV</h3>
+            <p>Juegos en <strong>alta definición</strong> en tu televisor.</p>
+          </div>
+          <div class="modo-card">
+            <img src="img/modo-semiportatil.png" alt="Modo Semiportátil" />
+            <h3>Modo semiportátil</h3>
+            <p>Comparte la pantalla y la diversión <strong>multijugador</strong>.</p>
+          </div>
+          <div class="modo-card">
+            <img src="img/modo-portatil.png" alt="Modo Portátil" />
+            <h3>Modo portátil</h3>
+            <p>Lleva tu consola con los <strong>Joy-Con™ acoplados</strong>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="joycon">
+        <h2>Controles Joy-Con™</h2>
+        <div class="joycon-layout">
+          <div class="texto-joycon">
+            <p>Ofrecen <strong>total flexibilidad</strong>: un control o dos, vertical u horizontal.</p>
+            <p>Siente la <strong>vibración HD</strong> y vive nuevas experiencias con la cámara infrarroja.</p>
+          </div>
+          <img src="img/controles-joycon-detalle.png" alt="Detalle Joycon" />
+        </div>
+        <div class="joycon-uso-grid">
+          <img src="img/joy-con-01.png" alt="Uso 1" />
+          <img src="img/joy-con-02.png" alt="Uso 2" />
+          <img src="img/joy-con-03.png" alt="Uso 3" />
+        </div>
+      </section>
+
+      <section id="galeria">
+        <h2>Grandes Franquicias</h2>
+        <div class="gallery-grid">
+          <div class="game-item"><img src="img/zelda-breath-of-the-wild.png" alt="Zelda" /></div>
+          <div class="game-item"><img src="img/super-mario-odyssey.png" alt="Mario" /></div>
+          <div class="game-item"><img src="img/super-smash-bros-ultimate.png" alt="Smash" /></div>
+          <div class="game-item"><img src="img/metroid-dread.png" alt="Metroid" /></div>
+          <div class="game-item"><img src="img/kirby-forgotten-land.png" alt="Kirby" /></div>
+          <div class="game-item"><img src="img/mario-kart-gameplay.jpg" alt="Gameplay 1" /></div>
+          <div class="game-item"><img src="img/zelda-gameplay-screenshot.jpg" alt="Gameplay 2" /></div>
+          <div class="game-item"><img src="img/multiplayer-lifestyle-lite-2.png" alt="Social" /></div>
+        </div>
+      </section>
+
+      <section id="contacto">
+        <h2>Únete al Club Nintendo</h2>
+        <form action="#">
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="tel">Teléfono:</label>
+          <input type="tel" id="tel" name="tel" required />
+          <label for="comentario">Comentario:</label>
+          <textarea id="comentario" name="comentario" rows="4" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <img src="img/gonzalo-orlandoni.png" alt="Gonzalo Orlandoni" class="perfil" />
+        <div class="info-alumno">
+          <p><strong>Alumno:</strong> Gonzalo Orlandoni</p>
+          <p><strong>Edad:</strong> 24 años</p>
+          <p><strong>Email:</strong> gonzalo.orlandoni@davinci.edu.ar</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
