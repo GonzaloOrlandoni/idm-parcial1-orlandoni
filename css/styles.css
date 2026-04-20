@@ -1,39 +1,53 @@
-/* --- CONFIGURACIÓN BASE (MOBILE FIRST) --- */
+/* ============================================================
+   1. RESET Y CONFIGURACIÓN BASE (Maquetado Fluido)
+   ============================================================ */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Evita que el padding estire el ancho [cite: 69] */
   margin: 0;
   padding: 0;
 }
 
 html {
   scroll-behavior: smooth;
-  /* Ajuste para que el header no tape el título al clickear anclas */
+  /* Evita que el header tape el título al clickear anclas [cite: 42, 64] */
   scroll-padding-top: 70px;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.5;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.4;
   color: #333;
   background-color: #f4f4f4;
+  overflow-x: hidden; /* Garantiza que no haya scroll horizontal  */
+  width: 100%;
 }
 
+/* Imágenes adaptables y optimizadas [cite: 41] */
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
+
+/* Control de Títulos para evitar desbordes en Mobile */
 h1,
 h2 {
   color: #e60012;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 20px;
-}
-strong {
-  color: #e60012;
+  word-wrap: break-word; /* Evita que palabras largas rompan el layout  */
+  font-size: 1.8rem; /* Ajuste para legibilidad en 420px */
 }
 
-/* --- HEADER Y MENÚ HAMBURGUESA --- */
+strong {
+  color: #e60012;
+  font-weight: bold; /* Refuerzo semántico obligatorio [cite: 39] */
+}
+
+/* ============================================================
+   2. HEADER Y MENÚ HAMBURGUESA (Técnica sin JS [cite: 77])
+   ============================================================ */
 header {
   background-color: #e60012;
   position: sticky;
@@ -59,7 +73,6 @@ header {
   width: 25px;
   height: 3px;
   background: white;
-  transition: 0.3s;
 }
 
 .nav-menu {
@@ -78,24 +91,37 @@ header {
   font-weight: bold;
 }
 
-/* Lógica de apertura */
 #menu-toggle:checked ~ .nav-menu {
   display: block;
 }
 
-/* --- SECCIONES --- */
+/* ============================================================
+   3. SECCIONES Y CONTENEDORES (Flex/Grid Ajustados [cite: 68])
+   ============================================================ */
 section {
-  padding: 50px 20px;
-  max-width: 1200px;
+  padding: 40px 15px;
+  width: 100%;
+  max-width: 1200px; /* Límite para que no se estire infinito  */
   margin: 0 auto;
 }
 
-/* Galería */
+/* Ajuste de Contenedores en Mobile */
+.hero-container,
+.grid-features,
+.modos-flex,
+.joycon-uso-grid {
+  display: flex;
+  flex-direction: column; /* Vertical por defecto en mobile */
+  gap: 20px;
+}
+
+/* Galería Grid [cite: 147] */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
+
 .game-item {
   aspect-ratio: 1/1;
   overflow: hidden;
@@ -107,15 +133,7 @@ section {
   object-fit: cover;
 }
 
-/* Joycon Uso */
-.joycon-uso-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-/* Formulario */
+/* Formulario [cite: 37, 38] */
 form {
   background: white;
   padding: 20px;
@@ -138,7 +156,9 @@ button {
   cursor: pointer;
 }
 
-/* --- FOOTER COMPACTO --- */
+/* ============================================================
+   4. FOOTER (Normativo [cite: 43-47])
+   ============================================================ */
 footer {
   background: #1a1a1a;
   color: white;
@@ -148,33 +168,31 @@ footer {
 .perfil {
   width: 250px;
   margin: 0 auto 5px;
-}
+} /* Ancho exacto por consigna [cite: 44] */
 .info-alumno p {
   margin: 0;
   font-size: 0.85rem;
   line-height: 1.1;
 }
 
-/* --- BREAKPOINT TABLET (768px) --- */
+/* ============================================================
+   5. MEDIA QUERIES (Breakpoints [cite: 25])
+   ============================================================ */
+
+/* TABLET (768px) */
 @media (min-width: 768px) {
-  .grid-features {
-    display: flex;
-    gap: 20px;
-  }
-  .modos-flex {
+  .grid-features,
+  .modos-flex,
+  .joycon-uso-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
   }
   .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  .joycon-uso-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
-/* --- BREAKPOINT DESKTOP (1024px) --- */
+/* DESKTOP (1024px hasta 1680px) */
 @media (min-width: 1024px) {
   .hamburger {
     display: none;
@@ -187,25 +205,21 @@ footer {
     border: none;
     padding: 20px 30px;
   }
-  .nav-menu li a:hover {
-    background: #b3000e;
-  }
 
+  /* Transformación de layout [cite: 28, 29, 67] */
   .hero-container {
-    display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 40px;
   }
   .hero-container img {
     width: 50%;
   }
-
   .joycon-layout {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    gap: 40px;
   }
+
   .gallery-grid {
     grid-template-columns: repeat(4, 1fr);
   }
