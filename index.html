@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IDM - Parcial 1 - Orlandoni</title>
+    <link rel="icon" href="https://www.nintendo.com/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
     <header>
       <nav class="nav-container">
@@ -55,18 +57,27 @@
         <div class="grid-features">
           <article>
             <img src="img/pantalla-oled-detalle.jpg" alt="Pantalla OLED detalle" />
-            <h3>Pantalla OLED de 7"</h3>
-            <p>Deleita tus ojos con <strong>colores vibrantes</strong> cuando juegues en el camino.</p>
+            <h3>Pantalla OLED y Audio</h3>
+            <p>
+              Deleita tus ojos con <strong>colores vibrantes</strong> cuando juegues en el camino. Disfruta de un
+              <strong>audio superior</strong> en los modos portátil y semiportátil con los altavoces de la consola.
+            </p>
           </article>
           <article>
             <img src="img/soporte-ajustable.png" alt="Soporte ajustable" />
             <h3>Soporte ajustable</h3>
-            <p>Utiliza el <strong>resistente soporte</strong> para disfrutar del modo semiportátil.</p>
+            <p>
+              Utiliza el <strong>resistente soporte</strong> para disfrutar del modo semiportátil. Ajusta el soporte y
+              encuentra tu <strong>mejor ángulo de vista</strong> para disfrutar de una rápida partida multijugador.
+            </p>
           </article>
           <article>
             <img src="img/consola-audio-puerto.jpg" alt="Puerto LAN" />
             <h3>Puerto LAN y 64GB</h3>
-            <p>Conexión por cable mediante el <strong>puerto LAN</strong> y mayor almacenamiento interno.</p>
+            <p>
+              Al utilizar el modo TV conéctate a Internet usando el <strong>puerto LAN</strong> de la base. Guarda los
+              juegos con <strong>64 GB de almacenamiento interno</strong> (una porción se reserva para el sistema).
+            </p>
           </article>
         </div>
       </section>
@@ -124,24 +135,26 @@
 
       <section id="contacto">
         <h2>Únete al Club Nintendo</h2>
-        <form action="#">
-          <label for="nombre">Nombre completo:</label>
-          <input type="text" id="nombre" name="nombre" required placeholder="Mario Bros" required />
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required placeholder="Mariobros@ejemplo.com" required />
-          <label for="tel">Teléfono:</label>
-          <input type="tel" id="tel" name="tel" required placeholder="01 2345 6789" required />
-          <label for="comentario">Comentario:</label>
-          <textarea
-            id="comentario"
-            name="comentario"
-            rows="4"
-            required
-            placeholder="Deje su comentario aquí......"
-            required
-          ></textarea>
-          <button type="submit">Enviar</button>
-        </form>
+        <div class="contacto-flex">
+          <img src="img/hardware-software.png" alt="Hardware y Software Nintendo" class="img-contacto" />
+          <form action="#">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Mario Bros" />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Mariobros@ejemplo.com" />
+            <label for="tel">Teléfono:</label>
+            <input type="tel" id="tel" name="tel" required placeholder="01 2345 6789" />
+            <label for="comentario">Comentario:</label>
+            <textarea
+              id="comentario"
+              name="comentario"
+              rows="4"
+              required
+              placeholder="Deje su comentario aquí......"
+            ></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
       </section>
     </main>
 
